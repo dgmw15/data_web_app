@@ -9,6 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Configuration
 from app.core.config import settings
+# Routes
+from app.api.routes import ai_routes
 
 app = FastAPI(
     title="DataCrunch API",
@@ -58,7 +60,5 @@ async def health_check():
     return {"status": "healthy"}
 
 
-# Import and include routers here
-# Example:
-# from app.api.routes import data_routes
-# app.include_router(data_routes.router, prefix="/api/v1/data", tags=["data"])
+# Register AI routes
+app.include_router(ai_routes.router, prefix="/api/v1/ai", tags=["AI"])

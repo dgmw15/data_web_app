@@ -22,3 +22,11 @@ httpx==0.26.0
 
 # Development
 python-dotenv==1.0.0
+
+# AI Providers
+google-generativeai==0.3.2
+google-cloud-aiplatform==1.38.1
+openai==1.12.0
+anthropic==0.18.0
+# DeepSeek uses OpenAI-compatible API, no separate SDK needed
+
